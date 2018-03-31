@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'Vuechart',
-}
+  name: "Vuechart"
+};
 </script>

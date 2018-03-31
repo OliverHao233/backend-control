@@ -20,48 +20,51 @@
   </div>
 </template>
 <script>
-    export default{
-        name: 'Login',
-        data(){
-            return{
-                loginInfo:{
-                    username: '',
-                    password: ''
-                },
-                hasError: false
-            }
-        },
-        methods:{
-            login(){
-                if (this.loginInfo.username==="admin" && this.loginInfo.password==="admin") {
-                    this.hasError = false;
-                    this.$router.push('/home');
-                } else {
-                    this.hasError = true;
-                }
-            }
-        }
+export default {
+  name: "Login",
+  data() {
+    return {
+      loginInfo: {
+        username: "",
+        password: ""
+      },
+      hasError: false
+    };
+  },
+  methods: {
+    login() {
+      if (
+        this.loginInfo.username === "admin" &&
+        this.loginInfo.password === "admin"
+      ) {
+        this.hasError = false;
+        this.$router.push("/home");
+      } else {
+        this.hasError = true;
+      }
     }
+  }
+};
 </script>
 
 <style>
-    .login-box {
-        margin: 200px auto;
-        width: 250px;
-        text-align: center;
-    }
-    .login-box .error {
-        color: #e01c1c;
-    }
+.login-box {
+  margin: 200px auto;
+  width: 250px;
+  text-align: center;
+}
+.login-box .error {
+  color: #e01c1c;
+}
 
-    .login-box input {
-        color: black;
-        border-radius: 3px;
-    }
+.login-box input {
+  color: black;
+  border-radius: 3px;
+}
 
-    .login-box input,
-    .login-box button {
-        width: 100%;
-    }
+.login-box input,
+.login-box button {
+  width: 100%;
+}
 </style>
 
