@@ -5,6 +5,7 @@ import Home from '../components/Home'
 import Basechart from '../components/Basechart'
 import Vuechart from '../components/Vuechart'
 
+
 Vue.use(Router)
 
 export default new Router({

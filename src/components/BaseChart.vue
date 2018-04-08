@@ -1,6 +1,6 @@
 <template>
     <div class="basetable">
-    <div class="form-title">表格管理<span> / </span>基础表格</div>
+        <div class="form-title">表格管理<span> / </span>基础表格</div>
 		<div class="form-option">
 			<button class="delete-all btn btn-primary" @click=deleteAll()>批量删除</button>
 			<select class="gender-select"  v-model="key_gender">
