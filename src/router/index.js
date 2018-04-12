@@ -9,28 +9,26 @@ import Vuechart from '../components/Vuechart'
 Vue.use(Router)
 
 export default new Router({
-    routes: [
-        {
-            path: '/',
-            component: Login,
-            name: 'login'
+  routes: [{
+      path: '/',
+      component: Login,
+      name: 'login'
+    },
+    {
+      path: '/home',
+      component: Home,
+      name: 'home',
+      children: [{
+          path: 'basechart',
+          component: Basechart,
+          name: 'basechart',
         },
         {
-            path: '/home',
-            component: Home,
-            name: 'home',
-            children: [
-                {
-                    path: 'basechart',
-                    component: Basechart,
-                    name: 'basechart',
-                },
-                {
-                    path: 'vuechart',
-                    component: Vuechart,
-                    name: 'vuechart',
-                },
-            ]
-        }
-    ]
+          path: 'vuechart',
+          component: Vuechart,
+          name: 'vuechart',
+        },
+      ]
+    }
+  ]
 })

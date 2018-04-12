@@ -26,7 +26,7 @@ export default {
         {
           name: "表格管理",
           isSubShow: false,
-          menuUrl: "/home/basechart",
+          menuUrl: "/home",
           subTitles: [
             {
               name: "基础表格",
@@ -47,7 +47,6 @@ export default {
   methods: {
     toggleSublist(item) {
       item.isSubShow = !item.isSubShow;
-      this.$router.push(item.menuUrl);
     },
 
     goTo(subitem) {
